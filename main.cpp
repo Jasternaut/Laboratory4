@@ -16,7 +16,8 @@
 
 */
 
-int main()
+// проверка на кратность и вывод результата арифметической операции. Пункт 1.
+int program1()
 {
     int A;
     int B;
@@ -43,14 +44,81 @@ int main()
         std::cout << A-B+C << std::endl;
     }
 
-    program1();
-
     return 0;
 }
 
-int program1()
+// Ввод кода ошибки и вывод расшифровки. Пункт 2
+int program2()
 {
-    
+    std::cout << "Error code: ";
+    int N;
+    std::cin >> N;
+
+    switch(N)
+    {
+        case 0:
+            std::cout << "All Good" << std::endl;
+            break;
+        case 1:
+            std::cout << "File read error" << std::endl;
+            break;
+        case 2:
+            std::cout << "File write error" << std::endl;
+            break;
+        case 3:
+            std::cout << "Not all fields are defined" << std::endl;
+            break;
+        default:
+            std::cout << "Wrong error code" << std::endl;
+            break;
+    }
 
     return 0;
 }
+
+// Переменная = 1 или -1, вывод - положительная или нет. Пункт 3.
+int program3()
+{
+    std::cout << "Choose (1 or -1): ";
+    int a;
+    std::cin >> a;
+
+    switch(a)
+    {
+        case -1:
+            std::cout << "Negative number" << std::endl;
+            break;
+        case 1:
+            std::cout << "Positive number" << std::endl;
+            break;
+        default:
+            std::cout << "You choose wrong number" << std::endl;
+            break;
+    }
+
+    return 0;
+}
+
+// здесь идёт выбор между пунктами лабораторной работы.
+int main()
+{
+    std::cout << "Select number of task: ";
+    int select;
+    std::cin >> select;
+
+    switch(select)
+    {
+        case 1:
+            program1();
+            break;
+        case 2:
+            program2();
+            break;
+        case 3:
+            program3();
+            break;
+    }
+
+    return 0;
+}
+
