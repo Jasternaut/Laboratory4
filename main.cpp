@@ -31,11 +31,11 @@ int program1()
     std::cout << "Input C: ";
     std::cin >> C;
 
-    if (((A + B) % C) && (C % B))
+    if (!((A + B) % C) && !(C % B))
     {
         std::cout << (A + B) / C - C / B << std::endl;
     }
-    else if (((A + B) % C) && !(C % B))
+    else if (!((A + B) % C) && (C % B))
     {
         std::cout << (A + B) / C + B * C << std::endl;
     }
